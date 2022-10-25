@@ -1,0 +1,60 @@
+@import url(common.css);
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+.gnb .allmenu {
+  background-color: crimson;
+  text-align: center;
+  font-size: 18px;
+}
+.gnb{
+  margin-top:50px;
+	width:250px;
+  border-radius: 5px;
+  background-color: #535c68;
+  overflow: hidden;
+}
+.gnb li a {
+  color: #fff;
+  text-transform: capitalize;
+  padding: 20px;
+  display: block;
+}
+
+.gnb>.main{
+  background:#535c68;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.gnb>.main:last-child{border-bottom: none;}
+.gnb>.main>a{  padding: 10px;}
+
+/* 주메뉴 오른쪽 화살표 */
+.gnb>.main>a:after {
+  content: "\f107";
+  font-family: fontawesome;
+  float: right;
+}
+.gnb>.main>a.uparrow:after {  /* 제이쿼리에 불러냄 */
+  content: "\f106";
+  font-family: fontawesome;
+  float: right;
+}
+
+.sub{display: none;}
+.sub>li{
+	height:30px;
+	background:#626e7e;
+  height:40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sub>li:last-child {border-bottom: none;
+}
+.sub>li>a{  
+	display:block;
+	color:#fff;
+	padding: 10px;
+}

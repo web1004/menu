@@ -1,0 +1,95 @@
+@import url(common.css);
+
+body {
+	font-family: 'Noto Sans', sans-serif;
+	background: #eee;
+}
+
+header{
+  width: 100%;
+  height: 50px;
+  background-color: #2b2f3a;
+}
+nav{
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+nav h1{ /* logo */
+  width: 30%;
+}
+
+/* Main Menu */
+.gnb{
+  /* border: 1px solid yellow; */
+  width: 70%;
+  display: flex;
+	justify-content: space-around;
+}
+.gnb .main{
+  /* border: 1px solid red; */
+  width: 150px;
+  text-align: center;
+  position: relative;
+}
+.gnb>.main>a{
+  /* border: 1px solid blue; */
+  position: relative;
+  display: block;
+  width: inherit;
+  height: 50px;
+  color: #7a8189;
+  font-size: 15px;
+	font-weight: 600;
+  padding-top: 12px;
+  box-sizing: border-box;
+  /* line-height: 50px;  */
+  overflow: hidden;
+}
+.gnb>.main>a:after{
+  content:"\f0de";
+	font-family: fontawesome;
+	position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #7a8189;
+  opacity: 0;
+  transition: 0.35s;
+}
+.gnb>.main:hover a:after{
+  opacity: 1;
+  top: 44px;
+}
+.gnb>.main:hover>a{color: #fff;}
+.gnb>.main:hover>a:after {color: #fff;}
+
+/* Sub Menu*/
+.sub {
+	display: none;  /*서브메뉴 감추기->jQuery에서 보이게 함*/
+	background: #fff;
+  position: absolute;
+
+}
+.sub li{
+  float: left;
+  padding: 0px 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub li a {
+	color: #666;
+	font-size: 14px;
+}
+.sub li:hover a{color: crimson;}
+
+/*서브메뉴 가로폭,나오는위치값->부모영역을 벗어나서 위치를 잡기 위함*/
+.s1{left:-50px;width:450px;}
+.s2{left:-100px;width:505px;}
+.s3{left:-50px;width:330px;}
+.s4{left:-70px;width:270px;}
+.s5{left:-30px;width:200px;}

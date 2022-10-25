@@ -1,0 +1,7 @@
+@import url(common.css);
+
+/* .gnb li{float:left;} */
+
+.gnb{
+  display: flex;
+}
