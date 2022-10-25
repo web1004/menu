@@ -89,7 +89,7 @@ nav h1{ /* logo */
 
 /*100%서브배경박스*/
 .sub_bgbox{ 
-  /* display:none; */
+  display:none;
   position: absolute;
   top: 100%;
   left: 0;
