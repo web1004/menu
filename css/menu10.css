@@ -4,12 +4,12 @@
   width: 150px;
   height: 100vh;
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   background-color:#27282d;
   z-index: 100; /*오버시 나오는 서브박스(p)보다 위에 올라오게 함.*/
 }
-#sidebar h1{  /*logo*/
+#sidebar h1{  /* logo */
   text-align: center;
   padding: 30px 0;
 }
@@ -52,30 +52,31 @@
 	width:150px;
 }
 .sub li a{
+  font-size: 15px;
 	color:#fff;
 	font-weight:400;
   line-height: 30px;
 }
 
 /* 주메뉴 오버시 나오는 서브배경박스 */
-.sub_box { 
-  position:fixed;
-  top:0;
-  left:150px;
+.sub_box{
+  position: fixed;
+  top: 0;
+  left: 150px;
   width:150px;
-  height:100vh;
-  background:#34343c;
-  z-index:80; 
- }
+  height: 100vh;
+  background-color: #34343c;
+  z-index: 80;
+}
 
 /* Trigger */
-.trigger {
+.trigger{
   /* border: 1px solid red; */
-  width: 30px;
-  height: 20px;
   position: fixed;
   top: 120px;
   left: 0;
+  width: 30px;
+  height: 20px;
   cursor: pointer;
 }
 .trigger span{
@@ -101,7 +102,6 @@
   top: 50%;
   transform: rotate(-45deg);
 }
-
 
 #contents{
   width: 100%;

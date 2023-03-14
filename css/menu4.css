@@ -1,8 +1,8 @@
 @import url(common.css);
 
-body {
-	font-family: 'Noto Sans', sans-serif;
-	background: #eee;
+body{
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #eee;
 }
 
 header{
@@ -26,9 +26,10 @@ nav h1{ /* logo */
   /* border: 1px solid yellow; */
   width: 70%;
   display: flex;
-	justify-content: space-around;
+  justify-content: space-around;
 }
-.gnb .main{
+
+.gnb>.main{
   /* border: 1px solid red; */
   width: 150px;
   text-align: center;
@@ -45,13 +46,13 @@ nav h1{ /* logo */
 	font-weight: 600;
   padding-top: 12px;
   box-sizing: border-box;
-  /* line-height: 50px;  */
-  overflow: hidden;
+  /* line-height: 50px; */
+
 }
-.gnb>.main>a:after{
-  content:"\f0de";
-	font-family: fontawesome;
-	position: absolute;
+.gnb .main a:after{ /*삼각형*/
+  content: "\f0de" ;
+  font-family: fontawesome;
+  position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -59,19 +60,19 @@ nav h1{ /* logo */
   opacity: 0;
   transition: 0.35s;
 }
-.gnb>.main:hover a:after{
+.gnb>.main:hover>a{color: #fff;}
+.gnb>.main:hover>a:after {
+  color: #fff;
   opacity: 1;
   top: 44px;
 }
-.gnb>.main:hover>a{color: #fff;}
-.gnb>.main:hover>a:after {color: #fff;}
+
 
 /* Sub Menu*/
-.sub {
-	display: none;  /*서브메뉴 감추기->jQuery에서 보이게 함*/
-	background: #fff;
+.sub{
+  display: none;  /*서브메뉴 감추기->jQuery에서 보이게 함*/
+  background: #fff;
   position: absolute;
-
 }
 .sub li{
   float: left;
@@ -80,6 +81,7 @@ nav h1{ /* logo */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
 }
 .sub li a {
 	color: #666;

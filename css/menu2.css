@@ -1,8 +1,8 @@
 @import url(common.css);
 
-body {
-	font-family: 'Noto Sans', sans-serif;
-	background: #eee;
+body{
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #eee;
 }
 
 header{
@@ -26,9 +26,10 @@ nav h1{ /* logo */
   /* border: 1px solid yellow; */
   width: 70%;
   display: flex;
-	justify-content: space-around;
+  justify-content: space-around;
 }
-.gnb .main{
+
+.gnb>.main{
   /* border: 1px solid red; */
   width: 150px;
   text-align: center;
@@ -42,23 +43,25 @@ nav h1{ /* logo */
   color: #7a8189;
   font-size: 15px;
 	font-weight: 600;
-  box-sizing: border-box;
-  line-height: 50px; 
+  line-height: 50px;
+
 }
-.gnb>.main>a:after{
-  content:"\f0dd";
-	font-family: fontawesome;
-	position: absolute;
+.gnb .main a:after{ /*삼각형*/
+  content: "\f0dd" ;
+  font-family: fontawesome;
+  position: absolute;
+  top: -2px;
   right: 10px;
   color: #7a8189;
 }
 .gnb>.main:hover>a{color: #fff;}
 .gnb>.main:hover>a:after {color: #fff;}
 
+
 /* Sub Menu*/
-.sub {
-	display: none;  /*서브메뉴 감추기->jQuery에서 보이게 함*/
-	background: #fff;
+.sub{
+  display: none;  /*서브메뉴 감추기->jQuery에서 보이게 함*/
+  background: #fff;
 }
 .sub li{
   height: 40px;
@@ -66,6 +69,7 @@ nav h1{ /* logo */
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #eee;
+  transition: 0.5s;
 }
 .sub li a {
 	color: #666;

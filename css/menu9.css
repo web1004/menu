@@ -1,4 +1,5 @@
 @import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -24,7 +25,6 @@ body {
   padding: 20px;
   display: block;
 }
-
 .gnb>.main{
   background:#535c68;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -33,17 +33,16 @@ body {
 .gnb>.main>a{  padding: 10px;}
 
 /* 주메뉴 오른쪽 화살표 */
-.gnb>.main>a:after {
+.gnb>.main>a:after {  /* 처음에 보이는 화살표(아래방향) */
   content: "\f107";
   font-family: fontawesome;
   float: right;
 }
-.gnb>.main>a.uparrow:after {  /* 제이쿼리에 불러냄 */
+.gnb>.main>a.uparrow:after {  /* 클릭시 바뀌는 화살표(위쪽방향)->제이쿼리에 불러냄 */
   content: "\f106";
   font-family: fontawesome;
   float: right;
 }
-
 .sub{display: none;}
 .sub>li{
 	height:30px;
@@ -51,8 +50,7 @@ body {
   height:40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.sub>li:last-child {border-bottom: none;
-}
+.sub>li:last-child {border-bottom: none;}
 .sub>li>a{  
 	display:block;
 	color:#fff;
