@@ -7,6 +7,7 @@ $(document).ready(function () {
   //햄버거메뉴 클릭시 나오는 사이드바.....
   qchk=true;
   $(".trigger").click(function(){
+
     $(this).toggleClass("active");
 
     if(qchk){
@@ -15,7 +16,7 @@ $(document).ready(function () {
       qchk=false;
     }else{
       $(this).stop().animate({left:"0px"},500); 
-      $("#sidebar").stop().animate({left:"-150px"},500); 
+      $("#sidebar").stop().animate({left:"-150px"},500);
       qchk=true;
     }
 
@@ -32,7 +33,7 @@ $(document).ready(function () {
 
   //서브메뉴가 있는 메뉴영역을 나가면 햄버거메뉴와 서브배경박스 다시 들어가게.....
   $(".main").mouseleave(function(){
-    $(".sub_box").stop().animate({"left":"-150px"},300);
+    $(".sub_box").stop().animate({left:"-150px"},300);
     $(".trigger").stop().animate({left:"150px"},300);
   });
 

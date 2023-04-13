@@ -1,9 +1,6 @@
 @import url(common.css);
 
-body{
-  font-family: 'Noto Sans', sans-serif;
-  background-color: #eee;
-}
+body{background-color: #eee;}
 
 header{
   width: 100%;
@@ -17,51 +14,51 @@ nav{
   display: flex;
   justify-content: space-between;
 }
-nav h1{ /* logo */
-  width: 30%;
+nav h1{
+  /* border: 1px solid yellow; */
+  flex: 2;
 }
+
 
 /* Main Menu */
 .gnb{
-  /* border: 1px solid yellow; */
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.gnb>.main{
   /* border: 1px solid red; */
-  width: 150px;
+  height: 50px;
+  flex: 6;
+  display: flex;
+  justify-content: flex-end;
   text-align: center;
 }
-.gnb>.main>a{
+.gnb>.main{
   /* border: 1px solid blue; */
-  position: relative;
+  width: 150px;
+}
+.gnb>.main>a{
+  /* border: 1px solid green; */
   display: block;
+  position: relative;
   width: inherit;
   height: 50px;
+  /* line-height: 50px; ->화살표의 위치가 수직으로 변경되어서 사용하면 안됨*/
+  padding-top: 12px;
+  box-sizing: border-box;
   color: #7a8189;
   font-size: 15px;
 	font-weight: 600;
-  padding-top: 12px;
-  box-sizing: border-box;
-  /* line-height: 50px; */
-
 }
-.gnb .main a:after{ /*삼각형*/
+.gnb>.main>a:after{ /*삼각형*/
   content: "\f0de" ;
   font-family: fontawesome;
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  color: #7a8189;
+  color: #fff;
   opacity: 0;
   transition: 0.35s;
 }
 .gnb>.main:hover>a{color: #fff;}
-.gnb>.main:hover>a:after {
-  color: #fff;
+.gnb>.main:hover>a:after{
   opacity: 1;
   top: 44px;
 }
@@ -69,8 +66,8 @@ nav h1{ /* logo */
 
 /* Sub Menu*/
 .sub{
-  display: none;  /*서브메뉴 감추기->jQuery에서 보이게 함*/
-  background: #fff;
+  display: none;
+  background-color: #fff;
 }
 .sub li{
   height: 40px;
@@ -80,6 +77,7 @@ nav h1{ /* logo */
   border-bottom: 1px solid #eee;
   transition: 0.5s;
 }
+.sub li:last-child{border-bottom: none;}
 .sub li a {
 	color: #666;
 	font-size: 14px;

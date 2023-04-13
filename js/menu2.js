@@ -15,3 +15,5 @@ $(document).ready(function () {
 stop() : 진행중인 애니메이션만 멈추게 함-생략하면 stop(false,false)
 stop(true,true) : 대기중인 애니메이션과 진행중인 애니메이션 모두 멈추게 함
 */
+
+

@@ -1,17 +1,13 @@
 @import url(common.css);
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body{
-  font-family: 'Noto Sans', sans-serif;
-  background-color: #eee;
-}
+body{background-color: #eee;}
 
 header{
   width: 100%;
   height: 50px;
   background-color: #2b2f3a;
   position: relative;
-  z-index: 100;  /* 메뉴가 맨위로 올라오게 함 */
 }
 nav{
   position: relative; /* 왼쪽서브배경박스의 이미지 위치기준 */
@@ -21,33 +17,35 @@ nav{
   display: flex;
   justify-content: space-between;
 }
-nav h1{ /* logo */
-  width: 30%;
+nav h1{
+  /* border: 1px solid yellow; */
+  flex: 2;
 }
+
 
 /* Main Menu */
 .gnb{
-  /* border: 1px solid yellow; */
-  width: 70%;
-  display: flex;
-}
-
-.gnb>.main{
   /* border: 1px solid red; */
-  width: 150px;
+  height: 50px;
+  flex: 6;
+  display: flex;
+  justify-content: flex-end;
   text-align: center;
 }
-.gnb>.main>a{
+.gnb>.main{
   /* border: 1px solid blue; */
-  position: relative;
+  width: 150px;
+}
+.gnb>.main>a{
+  /* border: 1px solid green; */
   display: block;
+  position: relative;
   width: inherit;
   height: 50px;
+  line-height: 50px;
   color: #7a8189;
   font-size: 15px;
 	font-weight: 600;
-  line-height: 50px;
-
 }
 .gnb>.main>a:after{ /*삼각형*/
   content: "\f0dd" ;
@@ -58,20 +56,17 @@ nav h1{ /* logo */
   color: #7a8189;
 }
 .gnb>.main:hover>a{color: #fff;}
-.gnb>.main:hover>a:after {color: #fff;}
-
+.gnb>.main:hover>a:after{color: #fff;}
 
 /* Sub Menu*/
 .sub_all{
-  display: none;  /*서브메뉴 감추기->jQuery에서 보이게 함*/
+  display: none; 
   position:absolute;
+  z-index: 100;
 	top:100%; 
-  z-index: 200;
   border-left:solid 1px #e8e8e8;
-  padding-top: 10px;
-	width:150px;
-	height:220px;
-  background: #fff;
+  width:150px;
+  height: 220px;
 }
 .last{border-right:solid 1px #e8e8e8;}
 .sub_all li{
@@ -80,13 +75,13 @@ nav h1{ /* logo */
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 .sub_all li a {
 	color: #666;
 	font-size: 14px;
 }
-.sub_all li:hover a{color: #000;}
+.sub_all li:hover a {color: cornflowerblue;}
 
 /*100%서브배경박스*/
 .sub_bgbox{ 
@@ -95,17 +90,17 @@ nav h1{ /* logo */
   top: 100%;
   left: 0;
 	width:100%;
-	height:230px; 
+	height:220px; 
 	background: #fff;
 }
 
 /* 서브왼쪽배경이미지 */	
 .subBoxImg ul li{  /*모든 이미지를 한 위치에 겹쳐놓음*/
-  display:none;
-	position:absolute;
+  display: none;
+  position:absolute;
 	top:60px;
 	left:50px;
-	z-index:300;
+  z-index: 300;
 }
 .subBoxImg h3{
   font-family: 'Raleway', sans-serif;
@@ -114,3 +109,5 @@ nav h1{ /* logo */
   text-transform: capitalize;
   text-align: center;
 }
+
+

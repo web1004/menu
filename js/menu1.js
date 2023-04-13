@@ -1,14 +1,14 @@
 $(document).ready(function () {
 
   $(".gnb li").hover(function(){
-    num = $(this).index()+1;  //0,1,2....->이미지파일명이 1부터 시작하므로 +1을 해서 0이 아닌 1부터 시작하게 함.
+    num = $(this).index()+1; //0,1,2....->이미지파일명이 1부터 시작하므로 +1을 해서 0이 아닌 1부터 시작하게 함.
     $(this).find("a img").attr({"src":"image/menuover_0"+num+".jpg"});
-    /*let을 붙이면 지역변수이므로 out일때의 문장에도 변수선언을 해주어야 함.
-      let을 붙이지 않으면 전역변수이므로 over일때의 문장에만 삽입함.*/
+    /*let을 붙이면 지역변수이므로 Out일때의 문장에도 변수선언을 한번 더 해주어야 함.
+      let을 붙이지 않으면 전역변수이므로 Hover일때의 문장에만 삽입함.*/
   },function(){
     // let num = $(this).index()+1;
     $(this).find("a img").attr({"src":"image/menu_0"+num+".jpg"});
-  });
+  })
 
 });
 

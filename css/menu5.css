@@ -1,9 +1,6 @@
 @import url(common.css);
 
-body{
-  font-family: 'Noto Sans', sans-serif;
-  background-color: #eee;
-}
+body{background-color: #eee;}
 
 header{
   width: 100%;
@@ -17,51 +14,53 @@ nav{
   display: flex;
   justify-content: space-between;
 }
-nav h1{ /* logo */
-  width: 30%;
+nav h1{
+  /* border: 1px solid yellow; */
+  flex: 2;
 }
+
 
 /* Main Menu */
 .gnb{
-  /* border: 1px solid yellow; */
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.gnb>.main{
   /* border: 1px solid red; */
-  width: 150px;
+  height: 50px;
+  flex: 6;
+  display: flex;
+  justify-content: flex-end;
   text-align: center;
+}
+.gnb>.main{
+  /* border: 1px solid blue; */
+  width: 150px;
   position: relative;
   transition: 0.5s;
 }
 .gnb .main:hover{background-color: #dbe4ea;}
 .gnb>.main>a{
-  /* border: 1px solid blue; */
+  /* border: 1px solid green; */
   display: block;
   width: inherit;
   height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
   color: #7a8189;
   font-size: 15px;
 	font-weight: 600;
-  box-sizing: border-box;
-  line-height: 50px;
-
 }
+
 .gnb>.main:hover>a{color: #333;}
 
 
 /* Sub Menu*/
 .sub{
-  display: none;  /*서브메뉴 감추기->jQuery에서 보이게 함*/
+  display: none;
   position: absolute;
   top: 100%;
   z-index: 100;
 }
 .sub li{
   float: left;
-  padding: 0px 20px;
+  padding: 0 20px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -79,6 +78,7 @@ nav h1{ /* logo */
 .s3{left:-50px;width:330px;}
 .s4{left:-70px;width:270px;}
 .s5{left:-30px;width:200px;}
+
 
 /*100%서브배경박스->jQuery에서 보이게 함*/
 .bg_box{ 
