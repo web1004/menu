@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $(".gnb").hover(function(){ //주메뉴영역전체에 오버시 
+  $(".gnb").hover(function(){
     $(this).find(".main .sub_all").stop().slideDown();
     $(".sub_bgbox").stop().slideDown();
   },function(){

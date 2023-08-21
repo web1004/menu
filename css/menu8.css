@@ -16,28 +16,26 @@ nav{
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 nav h1{
   /* border: 1px solid yellow; */
   flex: 2;
 }
 
-
 /* Main Menu */
 .gnb{
-  /* border: 1px solid red; */
+  /* border: 1px solid green; */
   height: 50px;
   flex: 6;
   display: flex;
-  justify-content: flex-end;
   text-align: center;
 }
 .gnb>.main{
-  /* border: 1px solid blue; */
   width: 150px;
 }
 .gnb>.main>a{
-  /* border: 1px solid green; */
+  /* border: 1px solid red; */
   display: block;
   position: relative;
   width: inherit;
@@ -46,6 +44,7 @@ nav h1{
   color: #7a8189;
   font-size: 15px;
 	font-weight: 600;
+  text-transform: uppercase;
 }
 .gnb>.main>a:after{ /*삼각형*/
   content: "\f0dd" ;
@@ -58,6 +57,7 @@ nav h1{
 .gnb>.main:hover>a{color: #fff;}
 .gnb>.main:hover>a:after{color: #fff;}
 
+
 /* Sub Menu*/
 .sub_all{
   display: none; 
@@ -65,23 +65,24 @@ nav h1{
   z-index: 100;
 	top:100%; 
   border-left:solid 1px #e8e8e8;
+  background: #fff;
   width:150px;
   height: 220px;
 }
-.last{border-right:solid 1px #e8e8e8;}
+.last{border-right: solid 1px #e8e8e8;}
 .sub_all li{
   width: inherit;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
+
 }
 .sub_all li a {
 	color: #666;
 	font-size: 14px;
 }
-.sub_all li:hover a {color: cornflowerblue;}
+.sub_all li:hover a{color: cornflowerblue;}
 
 /*100%서브배경박스*/
 .sub_bgbox{ 
@@ -100,7 +101,7 @@ nav h1{
   position:absolute;
 	top:60px;
 	left:50px;
-  z-index: 300;
+  z-index: 200;
 }
 .subBoxImg h3{
   font-family: 'Raleway', sans-serif;
@@ -109,5 +110,3 @@ nav h1{
   text-transform: capitalize;
   text-align: center;
 }
-
-

@@ -13,16 +13,16 @@ nav{
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 nav h1{
   /* border: 1px solid yellow; */
   flex: 2;
 }
 
-
 /* Main Menu */
 .gnb{
-  /* border: 1px solid red; */
+  /* border: 1px solid green; */
   height: 50px;
   flex: 6;
   display: flex;
@@ -30,11 +30,10 @@ nav h1{
   text-align: center;
 }
 .gnb>.main{
-  /* border: 1px solid blue; */
   width: 150px;
 }
 .gnb>.main>a{
-  /* border: 1px solid green; */
+  /* border: 1px solid red; */
   display: block;
   position: relative;
   width: inherit;
@@ -43,6 +42,7 @@ nav h1{
   color: #7a8189;
   font-size: 15px;
 	font-weight: 600;
+  text-transform: uppercase;
 }
 .gnb>.main>a:after{ /*삼각형*/
   content: "\f0dd" ;
@@ -62,15 +62,15 @@ nav h1{
 }
 .sub li{
   height: 40px;
+  border-bottom: 1px solid #eee;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #eee;
-  transition: 0.5s;
+
 }
 .sub li:last-child{border-bottom: none;}
 .sub li a {
 	color: #666;
 	font-size: 14px;
 }
-.sub li:hover {background: #dbe4ea;}
+.sub li:hover {background-color: #dbe4ea;}
