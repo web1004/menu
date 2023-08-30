@@ -26,9 +26,9 @@ $(document).ready(function () {
   $(".main").hover(function(){ 
     $(this).find(".sub").stop().show("slow");
     $(".sub_box").stop().animate({left:"150px"},300);
-    $(".trigger").stop().animate({left:"300px"},300);  
+    $(".trigger").stop().animate({left:"300px"},300); 
   },function(){
-    $(this).find(".sub").stop().hide("fast");  
+    $(this).find(".sub").stop().hide("fast");         
   });
 
   //서브메뉴가 있는 메뉴영역을 나가면 햄버거메뉴와 서브배경박스 다시 들어가게.....
