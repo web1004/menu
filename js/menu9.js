@@ -11,3 +11,6 @@ $(document).ready(function () {
   });
 
 });
+
+
+// siblings() : 앞의 선택자를 제외한 나머지 요소를 말함
