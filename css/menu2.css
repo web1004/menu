@@ -54,6 +54,8 @@ nav h1{
 }
 .gnb>.main:hover>a{color: #fff;}
 .gnb>.main:hover>a:after{color: #fff;}
+/* 중요!!
+주메뉴에 마우스 오버를 한 후 서브메뉴로 내려갈때도 주메뉴의 오버상태 스타일이 적용이 되려면 부모에게 hover를 적용해야 한다. */
 
 /* Sub Menu*/
 .sub{

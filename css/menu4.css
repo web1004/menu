@@ -77,7 +77,6 @@ nav h1{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .sub li:last-child{border-bottom: none;}
 .sub li a {

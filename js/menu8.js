@@ -9,7 +9,7 @@ $(document).ready(function () {
   });
 
   //주메뉴 오버시 해당하는 서브박스의 전체배경색과 왼쪽이미지 나오게 함
-  $(".main").hover(function () {
+  $(".main").hover(function(){
 
     let oldimg = 0;  //기존에 보이는 이미지
     let newimg = $(this).index(); //새로 바뀌는 이미지
@@ -22,7 +22,7 @@ $(document).ready(function () {
 
   },function(){
     $(this).find(".sub_all").css({ "background": "#fff"});
-    $(".subBoxImg ul li").stop().hide();
+    $(".subBoxImg ul li").stop().hide();   
   });
 
 });

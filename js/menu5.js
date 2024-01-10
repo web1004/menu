@@ -3,10 +3,10 @@ $(document).ready(function () {
   $(".sub").hide();  //display:none 과 동일함
 
   $(".main").hover(function(){
-    $(this).find(".sub").stop().slideDown();
+    $(this).find(".sub").stop().slideDown("slow");
     $(".bg_box").stop().slideDown();
   },function(){
-    $(this).find(".sub").stop().slideUp();
+    $(this).find(".sub").stop().slideUp("slow");
     $(".bg_box").stop().slideUp();
   });
 
