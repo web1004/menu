@@ -1,13 +1,23 @@
 $(document).ready(function () {
 
-  $(".sub").hide();  //display:none 과 동일함
-
-  $(".main").hover(function(){
-    $(this).find(".sub").stop().slideDown("slow");
-    $(".bg_box").stop().slideDown();
+  //메인메뉴 오버시 서브메뉴 풀다운.....
+  $(".gnb").hover(function(){
+    $(this).find(".main .sub").stop().slideDown();
+    $(".sub_bgbox").stop().slideDown();
   },function(){
-    $(this).find(".sub").stop().slideUp("slow");
-    $(".bg_box").stop().slideUp();
+    $(this).find(".main .sub").stop().slideUp();
+    $(".sub_bgbox").stop().slideUp();
   });
+
+  //각각의 주메뉴 오버시 해당하는 서브박스의 전체배경색과 왼쪽이미지 나오게 함 
+  $(".main").hover(function(){
+    $(this).find(".sub").css({ "background": "#dbe4ea"});
+    let subBoxImage = $(this).attr("data-image");
+    $(".sub_bgbox_img").css({"background-image":"url("+ subBoxImage + ")"});
+  },function(){
+    $(this).find(".sub").css({ "background": "#fff"});
+    $(".sub_bgbox_img").css({"background-image": ""});
+  });
+
 
 });

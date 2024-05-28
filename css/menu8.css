@@ -1,112 +1,62 @@
 @import url(common.css);
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body{background-color: #eee;}
-
-header{
-  width: 100%;
-  height: 50px;
-  background-color: #2b2f3a;
-  position: relative;
-}
-nav{
-  position: relative; /* 왼쪽서브배경박스의 이미지 위치기준 */
-  width: 1200px;
-  height: inherit;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav h1{
-  /* border: 1px solid yellow; */
-  flex: 2;
-}
-
-/* Main Menu */
-.gnb{
-  /* border: 1px solid green; */
-  height: 50px;
-  flex: 6;
-  display: flex;
-  text-align: center;
-}
-.gnb>.main{
-  width: 150px;
-}
-.gnb>.main>a{
-  /* border: 1px solid red; */
-  display: block;
-  position: relative;
-  width: inherit;
-  height: 50px;
-  line-height: 50px;
-  color: #7a8189;
-  font-size: 15px;
-	font-weight: 600;
-  text-transform: uppercase;
-}
-.gnb>.main>a:after{ /*삼각형*/
-  content: "\f0dd" ;
-  font-family: fontawesome;
-  position: absolute;
-  top: -2px;
-  right: 10px;
-  color: #7a8189;
-}
-.gnb>.main:hover>a{color: #fff;}
-.gnb>.main:hover>a:after{color: #fff;}
-
-
-/* Sub Menu*/
-.sub_all{
-  display: none; 
-  position:absolute;
-  z-index: 100;
-	top:100%; 
-  border-left:solid 1px #e8e8e8;
-  background: #fff;
-  width:150px;
-  height: 220px;
-}
-.last{border-right: solid 1px #e8e8e8;}
-.sub_all li{
-  width: inherit;
-  height: 40px;
+body{
+  font-family: 'Raleway', sans-serif;
+  color: #333;
   display: flex;
   justify-content: center;
-  align-items: center;
-
-}
-.sub_all li a {
-	color: #666;
-	font-size: 14px;
-}
-.sub_all li:hover a{color: cornflowerblue;}
-
-/*100%서브배경박스*/
-.sub_bgbox{ 
-  display:none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-	width:100%;
-	height:220px; 
-	background: #fff;
 }
 
-/* 서브왼쪽배경이미지 */	
-.subBoxImg ul li{  /*모든 이미지를 한 위치에 겹쳐놓음*/
-  display: none;
-  position:absolute;
-	top:60px;
-	left:50px;
-  z-index: 200;
-}
-.subBoxImg h3{
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  color:cornflowerblue;
-  text-transform: capitalize;
+.gnb .allmenu {
+  background-color: crimson;
   text-align: center;
+  font-size: 18px;
+}
+.gnb{
+  margin-top: 50px;
+  width: 250px;
+  border-radius: 5px;
+  background-color: #535c68;
+  overflow: hidden;
+}
+
+/* 주메뉴 */
+.gnb li a{
+  color: #fff;
+  text-transform: capitalize;
+  padding: 20px;
+  display: block;
+}
+.gnb>.main{
+  /* background-color:#535c68; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.gnb>.main:last-child{border-bottom: none;}
+.gnb>.main>a{  padding: 10px;}
+
+.gnb>.main>a:after {  /* 처음에 보이는 화살표(아래방향) */
+  content: "\f107";
+  font-family: fontawesome;
+  float: right;
+}
+.gnb>.main>a.uparrow:after {  /* 클릭시 바뀌는 화살표(위쪽방향)->제이쿼리에 불러냄 */
+  content: "\f106";
+  font-family: fontawesome;
+  float: right;
+}
+
+
+/* 서브메뉴 */
+.sub{display: none;}
+.sub li{
+	background:#626e7e;
+  height:40px;
+  /* line-height: 40px; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sub li:last-child {border-bottom: none;}
+.sub li a{
+  color: #e8e8e8;
+  padding: 10px;
 }

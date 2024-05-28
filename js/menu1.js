@@ -1,16 +1,18 @@
 $(document).ready(function () {
 
-  $(".gnb li").hover(function(){
-    num = $(this).index()+1;
-    $(this).find("a img").attr({"src":"image/menuover_0" + num + ".jpg"});
-    //.gnb li a img{} , js의 이미지경로는 html과 동일함
+  $(".main").hover(function(){
+    $(this).find(".sub").stop().slideDown();
   },function(){
-    // let num = $(this).index()+1;
-    $(this).find("a img").attr({"src":"image/menu_0" + num + ".jpg"});
+    $(this).find(".sub").stop().slideUp();
   });
 
 });
 
-/* 전역변수(어디서든 사용가능)와 지역변수(문장내에서만 사용할수 있음)
-변수에 let 을 붙이지 않으면 전역변수가 되어서 마우스 아웃일때 변수를 저장하지 않아도  변수 num을 사용할수 있다.
+/* 
+stop()메서드 : 애니메이션의 중복 겹침을 막기 위해서 사용하는 메서드
+앞의 애니메이션의 움직임을 실행후 바로 멈추게 함
+애니메이션 앞쪽에 사용하면 됨
+
+stop() : 진행중인 애니메이션만 멈추게 함-생략하면 stop(false,false)
+stop(true,true) : 대기중인 애니메이션과 진행중인 애니메이션 모두 멈추게 함
 */

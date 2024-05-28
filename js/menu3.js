@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-  $(".main").hover(function(){
-    $(this).find(".sub").stop().slideDown();
+  $(".gnb").hover(function(){
+    $(this).find(".main .sub").stop().slideDown(500,"easeOutBounce");
   },function(){
-    $(this).find(".sub").stop().slideUp();
+    $(this).find(".main .sub").stop().slideUp();
   });
 
 });

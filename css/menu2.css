@@ -1,11 +1,13 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
-body{background-color: #eee;}
+body{background-color: #888;}
 
 header{
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: #2b2f3a;
+  position: relative;
 }
 nav{
   width: 1200px;
@@ -15,64 +17,93 @@ nav{
   justify-content: space-between;
   align-items: center;
 }
-nav h1{
-  /* border: 1px solid yellow; */
-  flex: 2;
-}
 
 /* Main Menu */
-.gnb{
-  /* border: 1px solid green; */
-  height: 50px;
-  flex: 6;
+ul.gnb{
+  /* border: 1px solid green;  */
   display: flex;
-  justify-content: flex-end;
-  text-align: center;
+
 }
-.gnb>.main{
-  width: 150px;
+.gnb>.main{ /* 자손선택자로 메인메뉴에만 적용하게 함(.gnb에서 첫번째 자식인 .main만 적용) */
+  position: relative;
+
 }
 .gnb>.main>a{
-  /* border: 1px solid red; */
-  display: block;
+  /* border: 1px solid yellow; */
   position: relative;
-  width: inherit;
-  height: 50px;
-  line-height: 50px;
+  height: 60px;
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
   color: #7a8189;
   font-size: 15px;
 	font-weight: 600;
   text-transform: uppercase;
+  overflow: hidden;
+
 }
-.gnb>.main>a:after{ /*삼각형*/
-  content: "\f0dd" ;
+.gnb>.main>a:after{  /*삼각형*/
+  content: "\f0de" ;
   font-family: fontawesome;
   position: absolute;
-  top: -2px;
-  right: 10px;
-  color: #7a8189;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  transition: 0.35s;
 }
-.gnb>.main:hover>a{color: #fff;}
-.gnb>.main:hover>a:after{color: #fff;}
-/* 중요!!
-주메뉴에 마우스 오버를 한 후 서브메뉴로 내려갈때도 주메뉴의 오버상태 스타일이 적용이 되려면 부모에게 hover를 적용해야 한다. */
 
-/* Sub Menu*/
-.sub{
-  display: none;
-  background-color: #fff;
+.gnb>.main:hover>a{color: #fff;}
+.gnb>.main:hover>a:after{
+  top: calc(100% - 6px);
 }
-.sub li{
+
+
+/* Sub Menu */
+.sub{
+ /*  display: none; */  /* display: flex; 를 사용하기 때문에 적용안됨*/
+  position: absolute;
+  width: 100%;
   height: 40px;
-  border-bottom: 1px solid #eee;
+  top: 100%;
+  /* left: 0; ->부모위치를 벗어날거라 필요없음*/
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  column-gap: 20px;
 }
-.sub li:last-child{border-bottom: none;}
+.sub li{
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .sub li a {
 	color: #666;
 	font-size: 14px;
 }
-.sub li:hover {background-color: #dbe4ea;}
+.sub li:hover a{color: crimson;}
+
+/*서브메뉴 가로폭,나오는위치값->부모영역을 벗어나서 위치를 잡기 위함*/
+.s1{width: 450px;left:-70px;}
+.s2{width: 510px;left:-100px}
+.s3{width: 330px;left:-50px}
+.s4{width: 270px;left:-70px}
+.s5{width: 200px;left:-30px}
+
+/*100%서브배경박스->jQuery에서 보이게 함*/
+.bg_box{ 
+  display:none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+	width:100%;
+	height:40px; 
+	background-color:#fff;
+}
+
+section p{
+  font-size: 48px;
+  color: #666;
+}

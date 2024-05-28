@@ -1,28 +1,17 @@
 $(document).ready(function () {
 
-  $(".gnb").hover(function(){
-    $(this).find(".main .sub_all").stop().slideDown();
-    $(".sub_bgbox").stop().slideDown();
-  },function(){
-    $(this).find(".main .sub_all").stop().slideUp();
-    $(".sub_bgbox").stop().slideUp();
-  });
+  $(".main").click(function(){
 
-  //주메뉴 오버시 해당하는 서브박스의 전체배경색과 왼쪽이미지 나오게 함
-  $(".main").hover(function(){
+    //다른 주메뉴를 클릭했을때 기존에 내려가 있는거 올라가게 하고 화살표방향 바뀜
+    $(this).siblings().find(".sub").slideUp(300);
+    $(this).siblings().find(">a").removeClass("uparrow")
+    
+    //현재 선택한 주메뉴에 해당하는 서브메뉴 토글, 화살표 토글
+    $(this).find(".sub").slideToggle(200);
+    $(this).find(">a").toggleClass("uparrow");
 
-    let oldimg = 0;  //기존에 보이는 이미지
-    let newimg = $(this).index(); //새로 바뀌는 이미지
-
-    $(this).find(".sub_all").css({ "background": "#dbe4ea"});
-
-    $(".subBoxImg ul li").eq(oldimg).stop().hide("slow"); //기존이미지는 숨기기
-    $(".subBoxImg ul li").eq(newimg).stop().show("slow"); //새로 선택된 이미지는 보이기
-    oldimg = newimg; //위에서 새로 바뀐 이미지는 다시 기존이미지에 저장
-
-  },function(){
-    $(this).find(".sub_all").css({ "background": "#fff"});
-    $(".subBoxImg ul li").stop().hide();   
   });
 
 });
+
+// siblings() : 앞의 선택자를 제외한 나머지 요소를 말함
