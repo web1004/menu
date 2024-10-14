@@ -6,7 +6,7 @@ $(document).ready(function () {
     $(this).find(".sub").stop().slideDown();
     $(".bg_box").stop().slideDown();
   },function(){
-    $(this).find(".sub").stop().slideUp(50);
+    $(this).find(".sub").stop().slideUp();
     $(".bg_box").stop().slideUp();
   });
 

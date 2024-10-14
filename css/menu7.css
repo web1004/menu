@@ -91,7 +91,7 @@ body{
   color: #000;
   text-align: center;
   animation: showing2 0.5s linear;
-  animation-fill-mode: both;
+  animation-fill-mode: both;  /* 무한재생이 아니라 한번만 실행하고 멈추게 함 */
 }
 .anniversary em{
   display: block;
@@ -107,7 +107,7 @@ body{
 
 /* Trigger */
 .trigger{
-  /* border: 1px solid #000; */
+  /* border: 1px solid red; */
   position: absolute;
   right: 50px;
   top: 50px;

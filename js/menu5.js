@@ -11,13 +11,12 @@ $(document).ready(function () {
 
   //각각의 주메뉴 오버시 해당하는 서브박스의 전체배경색과 왼쪽이미지 나오게 함 
   $(".main").hover(function(){
-    $(this).find(".sub").css({ "background": "#dbe4ea"});
+    $(this).find(".sub").css({ "background-color": "#dbe4ea"});
     let subBoxImage = $(this).attr("data-image");
-    $(".sub_bgbox_img").css({"background-image":"url("+ subBoxImage + ")"});
+    $(".sub_bgbox_img").css({"background-image":"url(" + subBoxImage + ")"});
   },function(){
-    $(this).find(".sub").css({ "background": "#fff"});
+    $(this).find(".sub").css({ "background-color": "#fff"});
     $(".sub_bgbox_img").css({"background-image": ""});
   });
-
 
 });

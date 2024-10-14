@@ -25,7 +25,6 @@ ul.gnb{
 }
 .gnb>.main{ /* 자손선택자로 메인메뉴에만 적용하게 함(.gnb에서 첫번째 자식인 .main만 적용) */
   position: relative;
-
 }
 .gnb>.main>a{
   /* border: 1px solid red; */
@@ -39,7 +38,6 @@ ul.gnb{
 	font-weight: 600;
   text-transform: uppercase;
   overflow: hidden;
-
 }
 .gnb>.main>a:after{  /*삼각형*/
   content: "\f0de" ;
